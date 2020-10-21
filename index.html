@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./header.css">
+</head>
+<a name="top"></a>
+
+<body>
+    <div class="container"> 
+        <header>
+            <a href="index.html"><h1 id="logo">The Original Netflix</h1></a>
+            <div class="links">
+            <a href="./index.html"><button>Home</button></a>
+            <a><button id="movies-btn">Movies</button></a>
+            <a href="./about.html"><button>About Us</button></a>
+            </div>
+        </header>
+        <ul class="sub-list">
+            <li><a href="./Movies.html?type=toprated"><button>Top Ratings</button></a></li>
+            <li><a href="./Movies.html?type=nowplaying"><button>Now Playing</button></a></li>
+        </ul>
+    
+        </div>
+    <a href="Movies.html?type=toprated">
+        <div class="topRated">
+            Top Rated
+        </div>
+    </a>
+
+
+
+    <!-- Top Rated slideShow -->
+    <div class="slideshow-container" id='slidetoprated'>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <a href="Movies.html?type=nowplaying">
+        <div class="topRated">
+            Now playing
+        </div>
+    </a>
+
+
+    <!-- Now playing slideShow -->
+    <div class="slideshow-container" id='slideNowPlaying'>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="nowPlusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="nowPlusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    </div>
+
+    <hr>
+
+    <footer>
+        <address class="footer">
+            <p><span id="footer-title">The Original Netflix LTD.</span><br>
+                <span id="ft">sobhe St.<br>
+                    Broklyn, New York, 1548-9537<br>
+                    +1 0574-4723-753</span>
+            </p>
+        </address>
+        <!-- Add social media icons -->
+        <a href="www.facebook.com" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-youtube"></a><br>
+        <a href="#top">Back to top</a>
+        <p id="copy">&copy; 2020 The Original Netflex Co.</p>
+    </footer>
+
+</body>
+<script src="./header.js"></script>
+<script src="home.js"></script>
+<script src="homeNP.js"></script>
+</html>
