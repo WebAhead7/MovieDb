@@ -2,6 +2,17 @@
 body{
   background-color: black;
 }
+
+
+section{
+  padding-top:200px;
+}
+
+#slidetoprated img{
+  width:300px;
+}
+
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -105,19 +116,28 @@ body{
 
 .topRated{
   font-size: 20;
-  margin-left:15%;
   color: red;
-
+  text-align: center;
+  font-size: 55px;
 }
+
+
+footer{
+text-align: center;
+}
+
 
 .footer{
   padding:10px;
 }
+
+
 /* footer design */
 #footer-title{
   text-shadow: 15px 15px 20px #E50914;
   color: red;
 }
+
 
 #ft{
   color: white;

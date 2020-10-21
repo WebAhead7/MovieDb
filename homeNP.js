@@ -47,8 +47,11 @@ data.results.forEach(element => {
     
    
     var Img2 = document.createElement('img');
-    Img2.style.width="100%";
-    Img2.style.height="600px"
+    Img2.style.width="550px";
+    Img2.style.height="500px"
+    Img2.style.cursor="pointer";
+    Img2.style.marginLeft="50%";
+    Img2.style.transform="translateX(-50%)";
     Img2.style.verticalAlign='middle';
     slideNP.appendChild(divcon2);
     divcon2.classList.add("mySlides2")

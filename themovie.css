@@ -7,6 +7,17 @@ body{
     font-family: "cairo", sans-serif;
 }
 
+
+section{
+    padding-top:150px;
+  }
+
+ .popcorns{
+     display: flex;
+     justify-content: space-between;
+ }
+
+
 .mainchapter{
 
     min-height:100%;
@@ -64,6 +75,10 @@ body{
        font-weight: 300;
    }
 
+
+   .mainchapter > p{
+       text-align: left;
+   }
 
    
 

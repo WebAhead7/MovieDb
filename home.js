@@ -51,8 +51,11 @@ data.results.forEach(element => {
    // var divText = document.createElement('div');
     //divText.classList.add('text');
     var Img = document.createElement('img');
-    Img.style.width="100%";
-    Img.style.height="600px"
+    Img.style.width="550px";
+    Img.style.height="500px"
+    Img.style.marginLeft="50%";
+    Img.style.cursor="pointer";
+    Img.style.transform="translateX(-50%)";
     Img.style.verticalAlign='middle';
     slidetoprated.appendChild(divcon);
     divcon.classList.add("mySlides")
