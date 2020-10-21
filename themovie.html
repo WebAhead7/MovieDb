@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="themovie.css">    
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class="mainchapter">
+
+      <!--in this line we have title (we add in javascript)-->
+      <div id="nested-div">
+        <div id="some-details">
+          
+        </div>
+        <!--image was crated inside javascipt-->
+      </div>
+        <!--in this line we have paragraph (we add in javascript)-->
+
+    </div>
+</body>
+<script>
+  let myDiv=document.querySelector(".mainchapter");
+  let nested=document.querySelector("#nested-div");
+  let someDetails=document.querySelector("#some-details");
+  var parameters = location.search.substring(1)     .split("&");
+  var temp = parameters[0].split("=");
+
+      fetch("https://api.themoviedb.org/3/movie/"+temp[1]+"?api_key=aa48f2eff7284b7fe6bb91871f64f80d&language=en-US").then(response=>{
+        return response.json();
+      })
+      .then(MoviesData=>{
+          console.log(MoviesData);
+          let adult=MoviesData.adult;
+          if(adult===true){
+            adult="Yes";
+          }
+          else{
+            adult="No";
+          }
+          let title=document.createElement("h1");
+          title.innerHTML=`${MoviesData.title}`;
+          myDiv.appendChild(title);
+          someDetails.innerHTML+="<p>"+"<span>"+"Release Date: "+"</span>"+MoviesData.release_date+"</p>"
+          someDetails.innerHTML+=`<p><span>Budget: </span>${MoviesData.budget}</p>`;
+          someDetails.innerHTML+=`<p><span>Revenue: </span>${MoviesData.revenue}</p>`;
+          someDetails.innerHTML+=`<p><span>Adult: </span>${adult}</p>`;
+          someDetails.innerHTML+=`<p><span>Popularity: </span>${MoviesData.popularity}</p>`;
+          nested.appendChild(someDetails);
+          nested.innerHTML+=`<img src=http://image.tmdb.org/t/p/w185${MoviesData.poster_path}>`;
+          console.log(someDetails);
+          myDiv.appendChild(nested);
+          myDiv.innerHTML+="<p>"+MoviesData.overview+"</p>";
+    })
+          
+      .catch(error=>console.log(error));
+    
+
+</script>
+</html>
