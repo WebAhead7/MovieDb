@@ -1,7 +1,7 @@
 # MovieDb
 
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT LOGO add logo --> 
 <br />
 
 <p align="center">
