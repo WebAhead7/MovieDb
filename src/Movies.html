@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies</title>
     <link rel="stylesheet" href="./header.css">
-    <link rel="stylesheet" href="Movies.css">
+    <link rel="stylesheet" href="movies.css">
 </head>
 
 <body style="background-color: black;">
 
     <div class="container"> 
         <header>
-            <a href="index.html"><h1 id="logo">The Original Netflix</h1></a>
+            <a href="../index.html"><h1 id="logo">The Original Netflix</h1></a>
             <div class="links">
-            <a href="./index.html"><button>Home</button></a>
+            <a href="../index.html"><button>Home</button></a>
             <a><button id="movies-btn">Movies</button></a>
             <a href="./about.html"><button>About Us</button></a>
             </div>
         </header>
         <ul class="sub-list">
-            <li><a href="./Movies.html?type=toprated"><button>Top Ratings</button></a></li>
-            <li><a href="./Movies.html?type=nowplaying"><button>Now Playing</button></a></li>
+            <li><a href="./movies.html?type=toprated"><button>Top Ratings</button></a></li>
+            <li><a href="./movies.html?type=nowplaying"><button>Now Playing</button></a></li>
         </ul>
         </div>
 
@@ -56,7 +56,7 @@
 
         nextPage.addEventListener('click', function () {
             pageNum++;
-            window.location.href ="Movies.html?type=" + type + "&pageNum=" + pageNum;
+            window.location.href ="movies.html?type=" + type + "&pageNum=" + pageNum;
 
 
           
@@ -64,7 +64,7 @@
 
         previousPage.addEventListener('click', function () {
             pageNum--;
-            window.location.href ="Movies.html?type=" + type + "&pageNum=" + pageNum;
+            window.location.href ="movies.html?type=" + type + "&pageNum=" + pageNum;
            
         })
 

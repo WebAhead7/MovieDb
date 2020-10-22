@@ -67,7 +67,7 @@ data.results.forEach(element => {
    Img.src = 'http://image.tmdb.org/t/p/w185'+ element.poster_path;
 
    divcon.addEventListener('click',function(){
-    window.open("themovie.html?id="+element.id);
+    window.open("src/themovie.html?id="+element.id);
    })
 
 });
