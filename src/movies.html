@@ -7,9 +7,14 @@
     <title>Movies</title>
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="./uti.css">
 </head>
 
 <body style="background-color: black;">
+    <div class="loader">
+        <img src="../images/load-gif.gif">
+        </div>
+
 
     <div class="container"> 
         <header>
@@ -149,13 +154,18 @@
 
             });
 
-
+            var loader=document.querySelector(".loader");
+            vanish(loader);
         }
+      
+
 
     </script>
 
 </section>
 
+
+<script type="text/javascript" src="uti.js"></script>
 <script src="./header.js"></script>
 </body>
 

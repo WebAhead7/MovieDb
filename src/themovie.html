@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="themovie.css">    
     <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./uti.css">
     <title>You Movie</title>
    
 </head>
 <body>
+
+  <div class="loader">
+    <img src="../images/load-gif.gif">
+    </div>
+
   <div class="container"> 
     <header>
         <a href="../index.html"><h1 id="logo">The Original Netflix</h1></a>
@@ -80,6 +86,8 @@
           console.log(someDetails);
           myDiv.appendChild(nested);
           myDiv.innerHTML+="<p>"+MoviesData.overview+"</p>";
+        let loader=document.querySelector(".loader");
+        vanish(loader);
     })
           
       .catch(error=>{
@@ -89,4 +97,6 @@
     
 
 </script>
+<script type="text/javascript" src="uti.js"></script>
+
 </html>

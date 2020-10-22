@@ -1,3 +1,12 @@
+//PRE LOADER FUNCTION - AWWAD
+
+var loader=document.querySelector(".loader");
+
+
+///////////////////////////////
+
+
+
 var slideIndex = 1;
 var slideIndexNowPlaying = 1;
 // Next/previous controls
@@ -32,6 +41,7 @@ function showSlides(n,type) {
    
    
     slides[indexOfSlides-1].style.display = "block";
+    vanish(loader);
    
 }
 
