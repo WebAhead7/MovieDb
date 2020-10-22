@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Nuwrss Azzam  -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="movies.css">
+</head>
+
+<body style="background-color: black;">
+
+    <div class="container"> 
+        <header>
+            <a href="../index.html"><h1 id="logo">The Original Netflix</h1></a>
+            <div class="links">
+            <a href="../index.html"><button>Home</button></a>
+            <a><button id="movies-btn">Movies</button></a>
+            <a href="./about.html"><button>About Us</button></a>
+            </div>
+        </header>
+        <ul class="sub-list">
+            <li><a href="./movies.html?type=toprated"><button>Top Ratings</button></a></li>
+            <li><a href="./movies.html?type=nowplaying"><button>Now Playing</button></a></li>
+        </ul>
+        </div>
+
+<section>
+
+
+    <div style="width: 100%; display: flex; flex-wrap: wrap; gap: 5px; justify-content: space-between;" id="container">
+
+    </div>
+<br>
+    <br>
+    <div style="text-align: center; margin-left: 20px;margin-right: 20px; width: 100%; display: flex;justify-content: space-around;">
+       
+        <a href="#" class="buttonInMoviesList" id="previousPage">Previous Page</a>
+        
+        <a href="#" class="buttonInMoviesList" id="nextPage">Next Page</a>
+   
+</div>
+    <br>
+    <br>
+    <script>
+
+
+        var pageNum = 1;
+
+        
+
+        var type = '';
+        const nextPage = document.getElementById('nextPage');
+        const previousPage = document.getElementById('previousPage');
+
+        nextPage.addEventListener('click', function () {
+            pageNum++;
+            window.location.href ="movies.html?type=" + type + "&pageNum=" + pageNum;
+
+
+          
+        })
+
+        previousPage.addEventListener('click', function () {
+            pageNum--;
+            window.location.href ="movies.html?type=" + type + "&pageNum=" + pageNum;
+           
+        })
+
+        var parameters = location.search.substring(1).split("&");
+        console.log(parameters);
+
+        var temp = parameters[0].split("=");
+
+        var link = '';
+
+        type = temp[1];
+
+        if (parameters.length >= 2) {
+            var temp1 = parameters[1].split("=");
+            pageNum = parseInt(temp1[1]);
+            console.log(pageNum);
+        }
+        if (temp[1] == 'toprated') {
+            link = ('https://api.themoviedb.org/3/movie/top_rated?api_key=aa48f2eff7284b7fe6bb91871f64f80d&language=en-US&page=' + pageNum)
+
+        } else {
+            link = 'https://api.themoviedb.org/3/movie/now_playing?api_key=aa48f2eff7284b7fe6bb91871f64f80d&language=en-US&page=' + pageNum;
+
+        }
+
+        if (pageNum == 1) {
+            previousPage.style.display = 'none';
+        }
+
+
+        var container = document.getElementById("container");
+
+        getMovieDetails();
+
+        function getMovieDetails() {
+            fetch(link)
+                .then(response => response.json())
+                .then(movies => {
+                    if (pageNum == movies.total_pages) {
+                        nextPage.style.display = 'none';
+                    }
+                    addNewMovies(movies.results);
+
+                });
+        }
+
+        function addNewMovies(movies) {
+
+            movies.forEach(element => {
+                const divContainer = document.createElement('div');
+                divContainer.style.boxShadow='0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)';
+                divContainer.style.textAlign = 'center';
+                divContainer.style.borderRadius='25px'
+                divContainer.style.border='2px solid #E50914';
+                divContainer.style.background='black'
+                divContainer.style.margin='20px';
+                divContainer.style.width = '300px';
+
+
+                const img = document.createElement('img');
+                img.src = "http://image.tmdb.org/t/p/w185" + element.poster_path;
+                img.style.width='300px';
+                img.style.borderTopLeftRadius='25px';
+                img.style.borderTopRightRadius='25px';
+                
+                const head = document.createElement('h2');
+                head.style.textAlign = 'center';
+                head.style.color='white';
+                head.style.margin ='10px';
+                head.textContent = element.title;
+
+
+                container.appendChild(divContainer);
+                divContainer.appendChild(img);
+                divContainer.appendChild(head);
+
+                divContainer.addEventListener('click', function () {
+                    window.location.href ="themovie.html?id=" + element.id;
+                })
+
+            });
+
+
+        }
+
+    </script>
+
+</section>
+
+<script src="./header.js"></script>
+</body>
+
+</html>
