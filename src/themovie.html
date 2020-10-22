@@ -82,7 +82,10 @@
           myDiv.innerHTML+="<p>"+MoviesData.overview+"</p>";
     })
           
-      .catch(error=>console.log(error));
+      .catch(error=>{
+        alert("Problem when loading the page please try again later");
+        console.log(error)}
+        );
     
 
 </script>

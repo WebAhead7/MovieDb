@@ -108,7 +108,9 @@
                     }
                     addNewMovies(movies.results);
 
-                });
+                }).catch(err=>{
+                    alert("Problem when loading the page please try again later");
+                })
         }
 
         function addNewMovies(movies) {
