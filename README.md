@@ -5,7 +5,7 @@
 <br />
 
 <p align="center">
-  <img src="./images/log.png" width="400" height="250"/>
+  <img src="./images/log.png" width="600" height="250"/>
 </p>
 <p align="center">
   <h3 align="center">The Original Netflix</h3>
@@ -52,8 +52,8 @@ Check out the project instructions from WebAhead: [Projet instructions](https://
 <!-- CONTACT -->
 ## Contact
 
-* Mr. Khazen: [@GitHub](https://github.com/jiries-khazen)
-* Mr. Azzam:  [@GitHub](https://github.com/nuwrss)
-* Mr. Majadly:  [@GitHub](https://github.com/muhammadawwad9)
-* Mr. Majadly:  [@GitHub](https://github.com/shoogkabiya)
+* Khazen: [@GitHub](https://github.com/jiries-khazen)
+* Azzam:  [@GitHub](https://github.com/nuwrss)
+* Awwad:  [@GitHub](https://github.com/muhammadawwad9)
+* Kabiya:  [@GitHub](https://github.com/shoogkabiya)
 
