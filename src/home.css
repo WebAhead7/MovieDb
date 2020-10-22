@@ -31,8 +31,9 @@ section{
   display: none;
 }
 
-/* Next & previous buttons */
+/* Next & ious buttons */
 .prev, .next {
+  z-index:900;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -188,3 +189,10 @@ text-align: center;
   color: white;
 }
 
+
+
+@media all and (max-width:636px){
+
+  
+
+}

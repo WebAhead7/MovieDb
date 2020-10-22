@@ -18,3 +18,13 @@
   section{
     padding-top:200px;
   }
+
+  /*media queries for responsivness*/
+
+@media all and (max-width:710px){
+  section > div{
+   margin-left:50%;
+   position: relative;
+   right:150px;
+  }
+}
