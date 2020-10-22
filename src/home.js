@@ -35,7 +35,7 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=aa48f2eff7284b7fe6bb
 .then(Response => {
     console.log(Response);
     if(!Response.ok){
-     throw new console.error(errrooooor);
+     throw new Error("errrooooor");
     }
     return Response.json();
 })
@@ -46,10 +46,6 @@ data.results.forEach(element => {
    
     var divcon = document.createElement('div');
     
-   // var divNumtext = document.createElement('div');
-    //divNumtext.classList.add('numbertext');
-   // var divText = document.createElement('div');
-    //divText.classList.add('text');
     var Img = document.createElement('img');
     Img.style.width="550px";
     Img.style.height="500px"
@@ -74,41 +70,3 @@ data.results.forEach(element => {
 showSlides(slideIndex);
 })
 .catch((err) => console.log(err));
-
-//fetch URL now playing
-// fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=aa48f2eff7284b7fe6bb91871f64f80d&language&language=en-US&page=1")
-
-// .then(Response => {
-//     if(!Response.ok){
-//      throw new console.error(errrooooor);
-//     }
-//     return Response.json();
-// })
-// .then(function(data){
-    
-// console.log(data);
-// })
-// data.results.forEach(element => {
-   
-//     var divcon2 = document.createElement('div');
-    
-//     //var divNumtext = document.createElement('div');
-//     //divNumtext.classList.add('numbertext');
-//     //var divText = document.createElement('div');
-//     //divText.classList.add('text');
-//     var Img = document.createElement('img');
-//     Img.style.width="100%";
-//     Img.style.height="700px"
-//     Img.style.verticalAlign='middle';
-//     slidetoprated.appendChild(divcon);
-//     divcon2.classList.add("mySlides")
-//     //divcon.appendChild(divNumtext);
-//     divcon2.appendChild(Img);
-//     //divcon.appendChild(divText);
-
-//    Img.src = 'http://image.tmdb.org/t/p/w185'+ element.poster_path;
-
-// });
-// showSlides(slideIndex);
-// })
-// // .catch((err) => console.log(err));

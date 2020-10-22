@@ -34,7 +34,7 @@ fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=aa48f2eff7284b7fe6
 .then(Response => {
     console.log(Response);
     if(!Response.ok){
-     throw new console.error(errrooooor);
+     throw new Error("errrooooor");
     }
     return Response.json();
 })
@@ -55,9 +55,7 @@ data.results.forEach(element => {
     Img2.style.verticalAlign='middle';
     slideNP.appendChild(divcon2);
     divcon2.classList.add("mySlides2")
-    //divcon.appendChild(divNumtext);
     divcon2.appendChild(Img2);
-    //divcon.appendChild(divText);
     console.log('here');
 
 
