@@ -41,7 +41,7 @@ function showSlides(n,type) {
    
    
     slides[indexOfSlides-1].style.display = "block";
-    vanish(loader);
+    
    
 }
 
@@ -87,6 +87,7 @@ data.results.forEach(element => {
 
 });
 showSlides(slideIndex,"toprated");
+vanish(loader);
 })
 .catch((err) => {
   alert("Problem when loading the page please try again later");
