@@ -5,10 +5,10 @@
 <br />
 
 <p align="center">
-  <img src="" width="250" height="250"/>
+  <img src="./images/log.png" width="250" height="250"/>
 </p>
 <p align="center">
-  <h3 align="center">Best game EVER</h3>
+  <h3 align="center">The Original Netflix</h3>
   <p align="center">
     <a href="https://webahead7.github.io/MovieDb/"><strong>Check our website »</strong></a>
   </p>
@@ -53,7 +53,7 @@ Check out the project instructions from WebAhead: [Projet instructions](https://
 ## Contact
 
 * Mr. Khazen: [@GitHub](https://github.com/jiries-khazen)
-* Ms. Abd-ullatif:  [@GitHub](https://github.com/Lujain-AbdUllatif)
 * Mr. Azzam:  [@GitHub](https://github.com/nuwrss)
-* Mr. Majadly:  [@GitHub](https://github.com/mjmajadly)
+* Mr. Majadly:  [@GitHub](https://github.com/muhammadawwad9)
+* Mr. Majadly:  [@GitHub](https://github.com/shoogkabiya)
 
