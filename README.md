@@ -10,7 +10,7 @@
 <p align="center">
   <h3 align="center">Best game EVER</h3>
   <p align="center">
-    <a href=""><strong>Check our website »</strong></a>
+    <a href="https://webahead7.github.io/MovieDb/"><strong>Check our website »</strong></a>
   </p>
 </p>
 
